@@ -2,6 +2,7 @@
 
 ## Requirements
 
+- Clone this repository
 - Docker or Linux system
 - Router capable of supporting radius
   - Docs using Asus RT-RX88U
@@ -70,6 +71,8 @@ ctrl-c
 ### Notes from Linux (Ubuntu 22.04)
 
 https://wiki.freeradius.org/guide/Getting-Started
+
+
 http://deployingradius.com/documents/configuration/eap.html
 
 ```shell
