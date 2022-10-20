@@ -42,7 +42,7 @@ ctrl-c
 
 1. disconnect from WiFi
 1. connect to the router with ethernet cable
-1. configure the router (see manufactures instructions on how to connect to administration tool)
+1. configure the router (see manufacturer's instructions on how to connect to thier administration tool)
    1. Use the assigned ip address for your machine as the ip address of the "server"
    1. use port 1812
 
