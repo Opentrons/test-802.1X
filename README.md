@@ -5,7 +5,10 @@
 - Clone this repository
 - Docker or Linux system
 - Router capable of supporting radius
-  - Docs using Asus RT-RX88U
+  - Docs use Asus RT-RX88U
+
+<https://hub.docker.com/r/freeradius/freeradius-server>
+
 
 ## With Docker (preferred method)
 
@@ -33,16 +36,17 @@ docker run --rm --name my-radius -t -p 1812-1813:1812-1813/udp my-radius-image -
 
 ```shell
 docker run -it -p 1812:1812 freeradius/freeradius-server:latest /bin/bash
+## issue this testing command into the terminal
 radtest "testing" "password" host.docker.internal 1812 testing123
 # should see success and see the radius server log the interaction
-ctrl-c
+exit
 ```
 
 #### Steps 5-9
 
 1. disconnect from WiFi
 1. connect to the router with ethernet cable
-1. configure the router (see manufacturer's instructions on how to connect to thier administration tool)
+1. configure the router (see manufacturer's instructions on how to connect to their administration tool)
    1. Use the assigned ip address for your machine as the ip address of the "server"
    1. use port 1812
 
