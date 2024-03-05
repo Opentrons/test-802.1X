@@ -32,7 +32,7 @@ docker cp dummy:/etc/raddb/certs/client.key .
 docker rm -f dummy
 docker run --rm --name my-radius -t -p 1812-1813:1812-1813/udp my-radius-image -X
 ```
-> In another terminal
+> In another terminal to test your setup
 
 ```shell
 docker run -it -p 1812:1812 freeradius/freeradius-server:latest /bin/bash
@@ -44,7 +44,7 @@ exit
 
 #### Steps 5-9
 
-1. disconnect from WiFi
+1. disconnect from WiFi on your computer
 1. connect to the router with ethernet cable
 1. configure the router (see manufacturer's instructions on how to connect to their administration tool)
    1. Use the assigned ip address for your machine as the ip address of the "server"
@@ -54,7 +54,7 @@ exit
 ![radius](pics/radius-settings.png)
 
 1. In the app go to Devices > Robot Settings > Networking
-2. Setup one of the protocols
+2. Use EAP-TTLS with MD5 Authentication type to connect
 3. Connect successfully
 4. unplug usb cable and validate the connection (lights on and off)
 ![network](/pics/network.png)
@@ -68,9 +68,11 @@ exit
 > Same steps as above BUT use different connection method
 
 1. Reconnect USB (wait, this takes a minute)
-2. On the dropdown for the required files choose `Add new...`
-3. Select the `client.pem` and `client.key` files
-4. Note that the password of `whatever` is set in the /etc/raddb/certs/ca.cnf
+1. In the app go to Devices > Robot Settings > Networking
+1. Use EAP-TTLS with TLS
+1. On the dropdown for the required files choose `Add new...`
+1. Select the `client.pem` and `client.key` files
+1. Note that the password of `whatever` is set in the /etc/raddb/certs/ca.cnf
 ![addfiles](/pics/addfiles.png)
 ![fullconfig](pics/fullconfig.png)
 
