@@ -69,6 +69,8 @@ exit
 
 1. Reconnect USB (wait, this takes a minute)
 2. On the dropdown for the required files choose `Add new...`
+3. Select the `client.pem` and `client.key` files
+4. Note that the password of `whatever` is set in the /etc/raddb/certs/ca.cnf
 ![addfiles](/pics/addfiles.png)
 ![fullconfig](pics/fullconfig.png)
 
